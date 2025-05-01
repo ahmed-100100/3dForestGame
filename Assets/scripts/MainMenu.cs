@@ -1,25 +1,41 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip buttonSound;
 
-    public void PlayGame(){
-        SceneManager.LoadScene("Main");
+    public void PlayGame() {
+        StartCoroutine(PlaySoundAndLoadScene("Main"));
     }
 
-    public void GoToOPtionsMenu(){
-        SceneManager.LoadScene("OptionsMenu");
+    public void GoToOptionsMenu() {
+        StartCoroutine(PlaySoundAndLoadScene("OptionsMenu"));
     }
 
-    public void GoToMainMenu(){
-        SceneManager.LoadScene("MainMenu");
+    public void GoToMainMenu() {
+        StartCoroutine(PlaySoundAndLoadScene("MainMenu"));
     }
 
-    public void QuitGame(){
+    public void QuitGame() {
+        StartCoroutine(PlaySoundAndQuit());
+    }
+
+    private IEnumerator PlaySoundAndLoadScene(string sceneName) {
+        if (audioSource != null && buttonSound != null) {
+            audioSource.PlayOneShot(buttonSound);
+            yield return new WaitForSeconds(buttonSound.length);
+        }
+        SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator PlaySoundAndQuit() {
+        if (audioSource != null && buttonSound != null) {
+            audioSource.PlayOneShot(buttonSound);
+            yield return new WaitForSeconds(buttonSound.length);
+        }
         Application.Quit();
     }
-
 }
