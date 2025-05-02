@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 963d0ac9045a14a94b98a80bbf1b5659
   - enabled: 1
-    path: Assets/Scenes/OptionsMenu.unity
-    guid: 950308a3fb0f683349783e8ea25b6659
-  - enabled: 1
     path: Assets/Main.unity
     guid: 5e7af4bd95ac53a4cb784a9eedf8f6f9
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: 950308a3fb0f683349783e8ea25b6659
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
