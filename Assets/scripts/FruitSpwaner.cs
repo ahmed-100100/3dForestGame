@@ -14,7 +14,7 @@ public class FruitSpawner : MonoBehaviour
 
     void SpawnFruits()
     {
-        Debug.Log("Spawning fruits...");
+        // Debug.Log("Spawning fruits...");
         for (int i = 0; i < numberOfFruits; i++)
         {
             Vector3 randomPos = spawnAreaCenter + new Vector3(

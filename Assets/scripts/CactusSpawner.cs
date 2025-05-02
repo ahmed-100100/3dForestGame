@@ -14,7 +14,7 @@ public class CactusSpawner : MonoBehaviour
 
     void SpawnCactus()
     {
-        Debug.Log("Spawning cactus...");
+        // Debug.Log("Spawning cactus...");
         for (int i = 0; i < numberOfCactus; i++)
         {
             Vector3 randomPos = spawnAreaCenter + new Vector3(
