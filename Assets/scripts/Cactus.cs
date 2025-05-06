@@ -15,7 +15,7 @@ public class Cactus : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioSource.PlayOneShot(hurtSound);
-            ScoreManager.instance.AddScore(-1);
+            ScoreManager.instance.UpdateScore(-1);
             Destroy(gameObject, hurtSound.length/2);
         }
     }
