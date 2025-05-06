@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,11 +17,13 @@ public class MainMenu : MonoBehaviour
     }
 
     public void GoToMainMenu() {
+        Time.timeScale = 1f;
         StartCoroutine(PlaySoundAndLoadScene("MainMenu"));
     }
 
     public void QuitGame() {
         StartCoroutine(PlaySoundAndQuit());
+        
     }
 
     private IEnumerator PlaySoundAndLoadScene(string sceneName) {

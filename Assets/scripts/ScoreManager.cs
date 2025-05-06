@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void AddScore(int amount)
+    public void UpdateScore(int amount)
     {
         score += amount;
         if (scoreText != null)

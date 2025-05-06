@@ -15,7 +15,7 @@ public class Fruit : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             audioSource.PlayOneShot(collectSound);
-            ScoreManager.instance.AddScore(1);
+            ScoreManager.instance.UpdateScore(1);
             Destroy(gameObject, collectSound.length/2);
         }
     }
