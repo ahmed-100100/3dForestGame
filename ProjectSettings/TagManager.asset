@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ClickSound
   - Fruit
+  - Enemy
   layers:
   - Default
   - TransparentFX
