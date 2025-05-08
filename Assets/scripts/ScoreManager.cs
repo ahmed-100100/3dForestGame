@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public Text scoreText;
 
-    public int targetScore = 20; // win for level1
+    public int targetScore = 10; // win for level1
 
     void Awake()
     {
@@ -37,9 +37,11 @@ public class ScoreManager : MonoBehaviour
             audioSource?.PlayOneShot(winSound);
             Time.timeScale = 0f;
         }
-        else if (currentScene == "Level2" && score >= 50)
+        else if (currentScene == "Level2" && score >= 30)
         {
-            SceneManager.LoadScene("WinScene");
+              win.SetActive(true);
+            audioSource?.PlayOneShot(winSound);
+            Time.timeScale = 0f;
         }
     }
 }
