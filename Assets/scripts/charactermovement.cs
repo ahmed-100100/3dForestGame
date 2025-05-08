@@ -11,7 +11,7 @@ public class CharacterMovement : MonoBehaviour
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
-
+    private bool isGameOver = false;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -46,5 +46,11 @@ public class CharacterMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        if (transform.position.y < -10f && !isGameOver)
+    {
+        isGameOver = true;
+        GameOver.instance?.Finish();
+        Time.timeScale = 1f;
+    }
     }
 }

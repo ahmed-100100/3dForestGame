@@ -807,6 +807,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8de971c5e334f06f879194cd52f6b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 0}
+  audioSource: {fileID: 0}
+  gameOverSound: {fileID: 8300000, guid: 8f040bfd2643f4acbbf5208c38f6eedb, type: 3}
 --- !u!54 &5580120625607093649
 Rigidbody:
   m_ObjectHideFlags: 0
