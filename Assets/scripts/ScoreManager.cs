@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
+    public GameObject win;
+    public AudioSource audioSource;
+    public AudioClip winSound;
     public static ScoreManager instance;
 
     public int score = 0;
@@ -30,7 +33,9 @@ public class ScoreManager : MonoBehaviour
 
         if (currentScene == "Level1" && score >= targetScore)
         {
-            SceneManager.LoadScene("Level2");
+            win.SetActive(true);
+            audioSource?.PlayOneShot(winSound);
+            Time.timeScale = 0f;
         }
         else if (currentScene == "Level2" && score >= 50)
         {
