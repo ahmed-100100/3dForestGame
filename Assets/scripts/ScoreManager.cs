@@ -9,8 +9,7 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public Text scoreText;
 
-    public int targetScore = 20;
-    public string nextSceneName = "Level2"; 
+    public int targetScore = 20; // win for level1
 
     void Awake()
     {
@@ -27,9 +26,15 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
             scoreText.text = "Score : " + score.ToString();
 
-        if (score >= targetScore)
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "Level1" && score >= targetScore)
         {
-            SceneManager.LoadScene(nextSceneName);
+            SceneManager.LoadScene("Level2");
+        }
+        else if (currentScene == "Level2" && score >= 50)
+        {
+            SceneManager.LoadScene("WinScene");
         }
     }
 }
