@@ -12639,12 +12639,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9efb0daf3c8d871809b1f6a5130de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  win: {fileID: 0}
-  audioSource: {fileID: 0}
-  winSound: {fileID: 0}
+  win: {fileID: 478186501}
+  audioSource: {fileID: 13445517}
+  winSound: {fileID: 8300000, guid: 72a741e5592679e5dac6dc8b08962fe1, type: 3}
   score: 0
-  scoreText: {fileID: 0}
-  targetScore: 20
+  scoreText: {fileID: 5408405917929926065}
+  targetScore: 10
 --- !u!4 &1550162342
 Transform:
   m_ObjectHideFlags: 0
@@ -17397,6 +17397,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6008b1c792e799b7a6bad2c56281794, type: 3}
+--- !u!114 &5408405917929926065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3469731519286768731, guid: a6008b1c792e799b7a6bad2c56281794, type: 3}
+  m_PrefabInstance: {fileID: 5408405917929926064}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7158248438381082149
 PrefabInstance:
   m_ObjectHideFlags: 0
