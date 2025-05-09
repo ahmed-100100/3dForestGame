@@ -37,7 +37,7 @@ public class ScoreManager : MonoBehaviour
             audioSource?.PlayOneShot(winSound);
             Time.timeScale = 0f;
         }
-        else if (currentScene == "Level2" && score >= 30)
+        else if (currentScene == "Level2" && score >= 20)
         {
             SceneManager.LoadScene("Congrats");
         }
